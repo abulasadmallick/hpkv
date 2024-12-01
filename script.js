@@ -1,4 +1,14 @@
-// Hamburger Menu Toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+});
+
+
+/*Hamburger Menu Toggle
 document.getElementById('hamburger').addEventListener('click', () => {
     const menu = document.getElementById('menu');
     menu.classList.toggle('active');
@@ -9,7 +19,7 @@ document.getElementById('hamburger').addEventListener('click', () => {
     link.addEventListener('click', () => {
       document.getElementById('menu').classList.remove('active');
     });
-  });
+  });*/
   
   // Form Validation
   document.querySelector('form').addEventListener('submit', (e) => {
