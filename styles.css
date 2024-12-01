@@ -1,0 +1,174 @@
+/* General Reset */
+body, h1, h2, p, ul, li, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Header and Navigation */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #004d99;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav {
+    position: relative;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      background: #004d99;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      padding: 10px;
+      gap: 10px;
+      border-radius: 5px;
+    }
+  
+    .menu.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
+  /* Sections */
+  .section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .home {
+    background: #f4f4f4;
+    padding: 40px;
+  }
+  
+  /* Staff and Gallery Grids */
+  .staff-grid, .gallery-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .staff-member, .gallery-grid img {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .staff-member img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .staff-member h3, .staff-member p {
+    margin: 5px 0;
+  }
+  
+  /* Contact Form */
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  form button {
+    padding: 10px;
+    background-color: #004d99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #003366;
+  }
+  
+  /* Contact Information */
+  .contact-info {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .contact-info p {
+    margin: 5px 0;
+  }
+  
+  iframe {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #004d99;
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+  }
