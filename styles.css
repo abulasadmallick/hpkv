@@ -1,7 +1,7 @@
 /* General Reset */
 body, h1, h2, p, ul, li, input, textarea, button {
     margin: 0;
-    padding: 0;
+    padding: 5 px;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
   }
