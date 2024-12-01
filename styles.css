@@ -162,7 +162,13 @@ body, h1, h2, p, ul, li, input, textarea, button {
     border: 1px solid #ddd;
     border-radius: 5px;
   }
-  
+hr {
+    display: block;
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
   /* Footer */
   footer {
     text-align: center;
