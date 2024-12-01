@@ -1,7 +1,7 @@
 /* Reset styles for consistency across browsers */
 body, h1, h2, h3, p, ul, li, a, img, div, section, header, footer {
   margin: 0;
-  padding: 0;
+  padding: 0 10 px;
   box-sizing: border-box;
 }
 
@@ -49,19 +49,25 @@ nav {
   color: #f9c74f;
 }
 
-/* Hamburger Menu */
+/* Mobile Hamburger Menu */
 .hamburger {
   display: none;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   background-color: #004aad;
-  border: 2px solid white;
+  border: none;
   border-radius: 4px;
-  padding: 10px 15px;
+  padding: 10px 20px;
   cursor: pointer;
   text-align: center;
-  white-space: nowrap;
+  white-space: nowrap; /* Prevents text wrapping */
+  width: 100%; /* Ensures full width on smaller screens */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+}
+
+.hamburger:hover {
+  background-color: #003b8e; /* Slightly darker shade on hover */
 }
 
 @media (max-width: 768px) {
@@ -74,9 +80,11 @@ nav {
     flex-direction: column;
     position: absolute;
     top: 60px;
-    right: 0;
+    left: 0;
     width: 100%;
     background: #004aad;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
   .menu.show {
@@ -84,8 +92,20 @@ nav {
   }
 
   .menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Divider between items */
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
+  }
+
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .menu li a:hover {
+    color: #f9c74f;
   }
 }
 
