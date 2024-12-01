@@ -1,7 +1,7 @@
 /* Reset styles for consistency across browsers */
 body, h1, h2, h3, p, ul, li, a, img, div, section, header, footer {
   margin: 0;
-  padding: 0 10 px;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
