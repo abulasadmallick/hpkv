@@ -245,3 +245,13 @@ form textarea:focus {
   border-color: #004aad;
   box-shadow: 0 0 5px rgba(0, 74, 173, 0.3);
 }
+        @font-face {
+            font-family: "TiroBangla";
+            src: url("fonts/TiroBangla-Regular.ttf") format("truetype");
+        }
+
+        .custom-marquee {
+            font-family: "TiroBangla", sans-serif;
+            font-size: 20px;
+            color: #000;
+        }
