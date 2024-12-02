@@ -25,17 +25,33 @@ header .logo {
   font-weight: bold;
 }
 
+/* Center and style menu as boxes */
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center; /* Centers the menu */
   align-items: center;
   position: relative;
+  padding: 10px 0;
 }
 
 .menu {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 15px; /* Space between menu items */
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  border: 2px solid white; /* Add border to each menu item */
+  border-radius: 8px; /* Rounded corners for boxes */
+  background-color: #004aad; /* Same as the header background */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: #f9c74f; /* Highlight color on hover */
+  border-color: #f9c74f;
 }
 
 .menu li a {
@@ -43,10 +59,12 @@ nav {
   color: white;
   font-size: 16px;
   font-weight: bold;
+  padding: 10px 20px; /* Padding for box-like appearance */
+  display: block; /* Ensures the entire box is clickable */
 }
 
 .menu li a:hover {
-  color: #f9c74f;
+  color: #004aad; /* Text color change on hover */
 }
 
 /* Mobile Hamburger Menu */
