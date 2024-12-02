@@ -37,7 +37,7 @@ nav {
 .menu {
   list-style: none;
   display: flex;
-  gap: 15px; /* Space between menu items */
+  gap: 5px; /* Space between menu items */
   padding: 0;
   margin: 0;
 }
@@ -100,7 +100,7 @@ nav {
     top: 60px;
     left: 0;
     width: 100%;
-    background: #004aad;
+    background: #ffffff;
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
@@ -112,7 +112,7 @@ nav {
   .menu li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Divider between items */
     text-align: center;
-    padding: 15px 0;
+    padding: 0px 0;
   }
 
   .menu li a {
@@ -245,4 +245,3 @@ form textarea:focus {
   border-color: #004aad;
   box-shadow: 0 0 5px rgba(0, 74, 173, 0.3);
 }
-
