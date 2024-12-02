@@ -257,12 +257,6 @@ form textarea:focus {
         }
 .customtd{text-align: center;}
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0 10px;
-}
-
 .gallery-container {
     display: flex;
     flex-direction: column;
