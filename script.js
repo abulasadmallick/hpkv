@@ -46,7 +46,7 @@ document.getElementById('hamburger').addEventListener('click', () => {
 
 // Albums data
 const albums = [
-    { name: "Album 1", path: "gallery/album1" },
+    { name: "Album 1", path: "images/folder1" },
     { name: "Album 2", path: "gallery/album2" },
 ];
 
