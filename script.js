@@ -44,36 +44,49 @@ document.getElementById('hamburger').addEventListener('click', () => {
     alert('Thank you for contacting us!');
   });
 
-// Define the folder structure
-const folderStructure = {
-    folder1: ["images/folder1/image1.jpg", "images/folder1/image2.jpg"],
-    folder2: ["images/folder2/image3.jpg", "images/folder2/image4.jpg"],
-};
+// Albums data
+const albums = [
+    { name: "Album 1", path: "gallery/album1" },
+    { name: "Album 2", path: "gallery/album2" },
+];
 
-// Get the folder and image containers
-const folderContainer = document.getElementById("folders");
-const imageContainer = document.getElementById("images");
+// Generate album thumbnails
+const galleryContainer = document.getElementById("gallery-container");
+albums.forEach(album => {
+    const albumDiv = document.createElement("div");
+    albumDiv.classList.add("album");
 
-// Create folder buttons
-Object.keys(folderStructure).forEach(folder => {
-    const folderElement = document.createElement("div");
-    folderElement.classList.add("folder");
-    folderElement.textContent = folder;
-    folderElement.addEventListener("click", () => displayImages(folder));
-    folderContainer.appendChild(folderElement);
+    // First image of album as thumbnail
+    const thumbnail = document.createElement("img");
+    thumbnail.src = `${album.path}/img1.jpg`; // Adjust naming convention if needed
+    thumbnail.alt = album.name;
+
+    const caption = document.createElement("p");
+    caption.textContent = album.name;
+
+    albumDiv.appendChild(thumbnail);
+    albumDiv.appendChild(caption);
+    galleryContainer.appendChild(albumDiv);
+
+    // Add click event to show album images
+    albumDiv.addEventListener("click", () => showAlbum(album.path));
 });
 
-// Display images in the selected folder
-function displayImages(folder) {
-    imageContainer.innerHTML = ""; // Clear previous images
-    folderStructure[folder].forEach(imagePath => {
-        const imgElement = document.createElement("img");
-        imgElement.src = imagePath;
-        imageContainer.appendChild(imgElement);
-    });
+// Lightbox functionality
+const lightbox = document.getElementById("lightbox");
+const lightboxContent = document.getElementById("lightbox-content");
+const close = document.getElementById("close");
+
+function showAlbum(path) {
+    lightboxContent.innerHTML = ""; // Clear previous content
+    for (let i = 1; i <= 10; i++) { // Assume up to 10 images per album
+        const img = document.createElement("img");
+        img.src = `${path}/img${i}.jpg`;
+        img.alt = `Image ${i}`;
+        img.onerror = () => img.remove(); // Remove if image doesn't exist
+        lightboxContent.appendChild(img);
+    }
+    lightbox.classList.remove("hidden");
 }
 
-// Display the first folder by default
-if (Object.keys(folderStructure).length > 0) {
-    displayImages(Object.keys(folderStructure)[0]);
-}
+close.addEventListener("click", () => lightbox.classList.add("hidden"));
