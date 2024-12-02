@@ -43,3 +43,37 @@ document.getElementById('hamburger').addEventListener('click', () => {
   
     alert('Thank you for contacting us!');
   });
+
+// Define the folder structure
+const folderStructure = {
+    folder1: ["images/folder1/image1.jpg", "images/folder1/image2.jpg"],
+    folder2: ["images/folder2/image3.jpg", "images/folder2/image4.jpg"],
+};
+
+// Get the folder and image containers
+const folderContainer = document.getElementById("folders");
+const imageContainer = document.getElementById("images");
+
+// Create folder buttons
+Object.keys(folderStructure).forEach(folder => {
+    const folderElement = document.createElement("div");
+    folderElement.classList.add("folder");
+    folderElement.textContent = folder;
+    folderElement.addEventListener("click", () => displayImages(folder));
+    folderContainer.appendChild(folderElement);
+});
+
+// Display images in the selected folder
+function displayImages(folder) {
+    imageContainer.innerHTML = ""; // Clear previous images
+    folderStructure[folder].forEach(imagePath => {
+        const imgElement = document.createElement("img");
+        imgElement.src = imagePath;
+        imageContainer.appendChild(imgElement);
+    });
+}
+
+// Display the first folder by default
+if (Object.keys(folderStructure).length > 0) {
+    displayImages(Object.keys(folderStructure)[0]);
+}
