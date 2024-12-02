@@ -46,9 +46,7 @@ document.getElementById('hamburger').addEventListener('click', () => {
 
 // Albums data
 const albums = [
-    { name: "Album 1", path: "images/Folder1" },
-    { name: "Album 2", path: "gallery/album2" },
-];
+    { name: "Album 1", path: "images/Folder1" }];
 
 // Generate album thumbnails
 const galleryContainer = document.getElementById("gallery-container");
