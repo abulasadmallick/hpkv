@@ -256,3 +256,47 @@ form textarea:focus {
             color: #fff;
         }
 .customtd{text-align: center;}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#folders {
+    margin-bottom: 20px;
+}
+
+.folder {
+    padding: 10px 20px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+.folder:hover {
+    background-color: #0056b3;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
