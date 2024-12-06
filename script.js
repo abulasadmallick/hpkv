@@ -4,16 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.getElementById("menu");
   const submenuParents = document.querySelectorAll(".has-submenu");
 
+  // Toggle the main menu
   hamburger.addEventListener("click", () => {
     menu.classList.toggle("show");
   });
 
-  // Toggle submenus in the hamburger menu
+  // Ensure submenus are hidden by default
   submenuParents.forEach(parent => {
+    const submenu = parent.querySelector(".submenu");
+    if (submenu) submenu.style.display = "none"; // Hide submenu initially
+
+    // Toggle submenu visibility when parent is clicked
     parent.addEventListener("click", (e) => {
-      if (menu.classList.contains("show")) {
-        e.stopPropagation(); // Prevent parent menu closing
-        parent.classList.toggle("open");
+      e.stopPropagation(); // Prevent event bubbling
+
+      if (menu.classList.contains("show")) { // Only allow submenu toggle in mobile view
+        submenu.style.display = 
+          submenu.style.display === "none" || submenu.style.display === ""
+            ? "block"
+            : "none";
       }
     });
   });
@@ -22,6 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("nav ul li a").forEach(link => {
     link.addEventListener("click", () => {
       menu.classList.remove("show");
+
+      // Hide all submenus when menu is closed
+      submenuParents.forEach(parent => {
+        const submenu = parent.querySelector(".submenu");
+        if (submenu) submenu.style.display = "none";
+      });
     });
   });
 
