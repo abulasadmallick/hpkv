@@ -127,35 +127,31 @@ nav {
   }
 }
 
-/* Sidebar Styles */
-.sidebar {
-  width: 250px;
-  background: linear-gradient(180deg, #004aad, #f9c74f);
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin: 20px;
-  float: left;
-}
 
-.sidebar-menu {
+.submenu {
   list-style: none;
+  position: absolute;
+  display: none;
+  background-color: white;
+  margin: 0;
   padding: 0;
 }
 
-.sidebar-menu li {
-  margin: 15px 0;
+.menu > li:hover .submenu {
+  display: block;
 }
 
-.sidebar-menu li a {
-  color: white;
+.submenu li {
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.submenu li a {
   text-decoration: none;
-  font-size: 16px;
 }
 
-.sidebar-menu li a:hover {
-  color: #f9f9f9;
-}
+
+
 
 /* Main Content */
 .container {
