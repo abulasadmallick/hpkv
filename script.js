@@ -88,3 +88,25 @@ function showAlbum(path) {
 }
 
 close.addEventListener("click", () => lightbox.classList.add("hidden"));
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+  const submenuParents = document.querySelectorAll(".has-submenu");
+
+  // Toggle the main menu
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+
+  // Toggle submenus
+  submenuParents.forEach(parent => {
+    parent.addEventListener("click", (e) => {
+      if (menu.classList.contains("show")) {
+        e.stopPropagation(); // Prevent parent menu closing
+        parent.classList.toggle("open");
+      }
+    });
+  });
+});
