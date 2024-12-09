@@ -68,41 +68,6 @@ nav {
   color: #004aad;
 }
 
-/* Submenu styles */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  list-style: none;
-  background-color: #004aad;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 0;
-  z-index: 1000;
-}
-
-.submenu li {
-  border: none;
-}
-
-.submenu li a {
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-  display: block;
-  font-size: 14px;
-}
-
-.submenu li a:hover {
-  background-color: #f9c74f;
-  color: #004aad;
-}
-
-/* Show submenu on hover */
-.menu li:hover .submenu {
-  display: block;
-}
 
 /* Mobile Hamburger Menu */
 .hamburger {
@@ -127,6 +92,9 @@ nav {
 @media (max-width: 768px) {
   .hamburger {
     display: inline-block;
+  }
+  header .logo {
+    font-size: 5vw; /* Responsive font size based on screen width */
   }
 
   .menu {
@@ -192,16 +160,7 @@ footer {
   font-size: 14px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    float: none;
-    margin: 0;
-    margin-bottom: 20px;
-  }
-
-  .container {
+.container {
     margin-left: 0;
   }
 }
