@@ -94,7 +94,7 @@ nav {
     display: inline-block;
   }
   header .logo {
-    font-size: 5vw; /* Responsive font size based on screen width */
+    font-size: 20vw; /* Responsive font size based on screen width */
   }
 
   .menu {
