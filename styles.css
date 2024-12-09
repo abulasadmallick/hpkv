@@ -93,9 +93,6 @@ nav {
   .hamburger {
     display: inline-block;
   }
-  header .logo {
-    font-size: 20vw; /* Responsive font size based on screen width */
-  }
 
   .menu {
     display: none;
