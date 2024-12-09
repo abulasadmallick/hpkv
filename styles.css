@@ -20,14 +20,14 @@ header {
   text-align: center;
 }
 
-header .logo {
+.logo {
   font-size: 35px; /* Responsive font size */
   font-weight: bold;
   text-decoration: none; /* Removes underline */
   color: white; /* Sets text color to white */
 }
 
-header .logo:hover {
+.logo:hover {
   text-decoration: none; /* Ensures underline doesn't appear on hover */
   color: #f0f0f0; /* Optional hover effect (lighter white shade) */
 }
