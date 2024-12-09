@@ -92,6 +92,22 @@
         border-right: none;
       }
     }
+
+
+    .social-container {
+    position: relative; /* Ensure the container is relatively positioned */
+    height: 100vh; /* Set height for demonstration, adjust as needed */
+    display: flex;
+    align-items: flex-end; /* Align items at the bottom */
+    justify-content: center; /* Center horizontally, adjust as needed */
+    padding: 20px; /* Optional: Add padding if needed */
+    background-color: #f4f4f4; /* Optional: Background color for clarity */
+}
+
+.social-container a,
+.social-container img {
+    margin: 0 10px; /* Optional: Add spacing between elements */
+}
   </style>
 </head>
 <body>
@@ -134,8 +150,11 @@
         </div>
         <div class="widget">
           <h3>Find us on Social Media</h3>
-          <a href="https://www.facebook.com/profile.php?id=61550229509787&mibextid=ZbWKwL" class="fa fa-facebook"></a>
-          <img src="images/wa.png" width="50px" width="auto"/>
+          <div class="social-container">
+            <a href="https://www.facebook.com/profile.php?id=61550229509787&mibextid=ZbWKwL" class="fa fa-facebook"></a>
+            <img src="images/wa.png" width="50px" style="width: auto;" />
+          </div>
+
         </div>
       </div>
     </div>
