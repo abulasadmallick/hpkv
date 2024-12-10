@@ -66,7 +66,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-document.addEventListener('dblclick', () => {
-      // Close the browser window (works only for windows opened by JavaScript)
-      window.close();
+    let backPressCount = 0;
+    const exitTimeLimit = 2000; // 2 seconds
+    let lastPressTime = 0;
+
+    window.addEventListener('popstate', () => {
+      const currentTime = new Date().getTime();
+
+      // If the back button is pressed within 2 seconds, exit the browser
+      if (currentTime - lastPressTime <= exitTimeLimit) {
+        // Close the browser window or navigate to a safe location
+        window.close(); // This will work only for windows opened by JavaScript.
+      } else {
+        lastPressTime = currentTime;
+        // Push a new state to prevent the page from navigating away
+        history.pushState(null, null, location.href);
+      }
     });
+
+    // Push an initial state to the history stack
+    history.pushState(null, null, location.href);
