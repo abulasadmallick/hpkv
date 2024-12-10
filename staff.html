@@ -6,57 +6,44 @@
   <meta name="description" content="Welcome to Hanspukuria Vidyapith. Explore our educational offerings, activities, and achievements.">
   <meta name="keywords" content="Hanspukuria Vidyapith, education, school, learning, Nadia">
   <meta name="author" content="Hanspukuria Vidyapith Team">
-  <title>Hanspukuria Vidyapith - Home</title>
+  <title>Hanspukuria Vidyapith - Staff</title>
   <link rel="icon" type="image/x-icon" href="images/hpkvico.ico">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="script.js" defer></script>
+  <script src="script.js" defer=""></script>
   <style>
+
+.fa {
+    width: 40px;
+    padding: 6px;
+    font-size: 30px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+    
+    
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
-    }
-
-    header {
-      background-color: #004aad;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .custom-marquee {
-      color: #fff;
-      background-color: #002f6c;
-      padding: 10px 0;
-      font-size: 1.2em;
-    }
-
-    nav {
-      background-color: #004aad;
-      color: #fff;
-      padding: 10px;
-    }
-
-    .menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    .menu li a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 15px;
-    }
-
-    .menu li a:hover {
-      background-color: #002f6c;
-      border-radius: 5px;
     }
 
     main {
@@ -66,38 +53,54 @@
       padding: 10px;
     }
 
+    .full-image {
+      width: 100%;
+      height: auto;
+    }
+
     .content-container {
       display: flex;
-      flex-wrap: nowrap;
-      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .left-div {
       flex: 3;
       padding: 20px;
-      border-right: 2px solid #ccc;
+      //border-right: 2px solid #ccc;
     }
 
     .right-div {
       flex: 1;
       padding: 20px;
-      max-width: 300px;
     }
 
-    .widget, .normalwidget {
+    .widget {
       border: 1px solid #ccc;
       border-radius: 5px;
       padding: 10px;
       margin-bottom: 10px;
       background-color: #f9f9f9;
     }
+        .normalwidget {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+          height: 200px;
+    }
 
-    .normalwidget .widget h3 {
+    .normalwidget h3{
+      margin-top: 0;
+      background-color: #004aad;
+      color: #fff;}
+    
+    
+    .widget h3{
       margin-top: 0;
       background-color: #004aad;
       color: #fff;
-      padding: 5px;
-      border-radius: 3px;
     }
 
     @media (max-width: 768px) {
@@ -109,56 +112,9 @@
         border-right: none;
       }
     }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-
-    th, td {
-      border: 1px solid #ddd;
-      text-align: center;
-      padding: 8px;
-    }
-
-    th {
-      background-color: #f4f4f4;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #004aad;
-      color: white;
-    }
-
-    .fa {
-      width: 40px;
-      height: 40px;
-      font-size: 30px;
-      text-align: center;
-      line-height: 40px;
-      margin: 5px 2px;
-      border-radius: 50%;
-      text-decoration: none;
-    }
-
-    .fa:hover {
-      opacity: 0.7;
-    }
-
-    .fa-facebook {
-      background: #3B5998;
-      color: white;
-    }
-
-    .fa-youtube {
-      background: #bb0000;
-      color: white;
-    }
-  </style>
+</style>
 </head>
+
 <body>
   <header>
     <div class="logo">Hanspukuria Vidyapith</div>
