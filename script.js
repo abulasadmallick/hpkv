@@ -66,3 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+document.addEventListener('dblclick', () => {
+      // Close the browser window (works only for windows opened by JavaScript)
+      window.close();
+    });
