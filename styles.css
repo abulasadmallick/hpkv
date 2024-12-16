@@ -100,7 +100,9 @@ nav {
   .hamburger {
     display: inline-block;
   }
-
+.logo {
+  font-size: 20px; /* Responsive font size */
+  font-weight: bold;
   .menu {
     display: none;
     flex-direction: column;
