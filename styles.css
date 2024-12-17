@@ -1,7 +1,7 @@
 /* Reset styles for consistency across browsers */
 body, h1, h2, h3, p, ul, li, a, img, div, section, header, footer {
   margin: 0;
-  padding: 0 10px;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -16,20 +16,20 @@ body {
 header {
   background: #004aad;
   color: white;
-  padding: 2px 0;
+  padding: 10px 0;
   text-align: center;
 }
 
 .logo {
-  font-size: 35px; /* Responsive font size */
+  font-size: 35px;
   font-weight: bold;
-  text-decoration: none; /* Removes underline */
-  color: white; /* Sets text color to white */
+  text-decoration: none;
+  color: white;
 }
 
 .logo:hover {
-  text-decoration: none; /* Ensures underline doesn't appear on hover */
-  color: #f0f0f0; /* Optional hover effect (lighter white shade) */
+  text-decoration: none;
+  color: #f0f0f0;
 }
 
 /* Center and style menu as boxes */
@@ -37,7 +37,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   padding: 10px 0;
 }
 
@@ -46,11 +45,10 @@ nav {
   display: flex;
   gap: 5px;
   padding: 0;
-  margin: 0;
 }
 
 .menu li {
-  position: relative; /* For submenu positioning */
+  position: relative;
   border: 2px solid white;
   border-radius: 8px;
   background-color: #004aad;
@@ -75,7 +73,6 @@ nav {
   color: #004aad;
 }
 
-
 /* Mobile Hamburger Menu */
 .hamburger {
   display: none;
@@ -86,9 +83,6 @@ nav {
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
-  text-align: center;
-  white-space: nowrap;
-  width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -100,9 +94,11 @@ nav {
   .hamburger {
     display: inline-block;
   }
-.logo {
-  font-size: 20px; /* Responsive font size */
-  font-weight: bold;
+
+  .logo {
+    font-size: 20px;
+  }
+
   .menu {
     display: none;
     flex-direction: column;
@@ -122,14 +118,10 @@ nav {
   .menu li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
-    padding: 0px 0;
   }
 
   .menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
+    color: #004aad;
   }
 
   .menu li a:hover {
@@ -137,7 +129,6 @@ nav {
   }
 
   .submenu {
-    position: static;
     display: none;
   }
 
@@ -145,18 +136,19 @@ nav {
     display: flex;
     flex-direction: column;
   }
-  .content-container {
-        flex-direction: column;
-      }
 
-      .left-div {
-        border-right: none;
-      }
+  .content-container {
+    flex-direction: column;
+  }
+
+  .left-div {
+    border-right: none;
+  }
 }
 
 /* Main Content */
 .container {
-  margin-left: 270px;
+  margin: 20px auto;
   padding: 20px;
   background-color: white;
   border-radius: 8px;
@@ -171,11 +163,6 @@ footer {
   padding: 10px 0;
   margin-top: 20px;
   font-size: 14px;
-}
-
-.container {
-    margin-left: 0;
-  }
 }
 
 /* General form styling */
@@ -193,7 +180,6 @@ form {
 
 form label {
   font-size: 16px;
-  margin-bottom: 8px;
   font-weight: bold;
 }
 
@@ -204,7 +190,6 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 form textarea {
@@ -233,6 +218,7 @@ form textarea:focus {
   box-shadow: 0 0 5px rgba(0, 74, 173, 0.3);
 }
 
+/* Font face */
 @font-face {
   font-family: "TiroBangla";
   src: url("fonts/TiroBangla-Regular.ttf") format("truetype");
@@ -247,76 +233,72 @@ form textarea:focus {
 .customtd {
   text-align: center;
 }
+
+/* Social Media Icons */
 .fa {
-    width: 40px;
-    padding: 6px;
-    font-size: 30px;
-    height: 40px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fa-facebook {
   background: #3B5998;
   color: white;
 }
+
 .fa-youtube {
   background: #bb0000;
   color: white;
 }
-    
-    .full-image {
-      width: 100%;
-      height: auto;
-    }
 
-    .content-container {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
+/* Widgets */
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
 
-    .left-div {
-      flex: 3;
-      padding: 20px;
-      //border-right: 2px solid #ccc;
-    }
+.left-div {
+  flex: 3;
+  padding: 20px;
+}
 
-    .right-div {
-      flex: 1;
-      padding: 20px;
-    }
+.right-div {
+  flex: 1;
+  padding: 20px;
+}
 
-    .widget {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #f9f9f9;
-    }
-        .normalwidget {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #f9f9f9;
-          height: 200px;
-    }
+.widget,
+.normalwidget {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
 
-    .normalwidget h3{
-      margin-top: 0;
-      background-color: #004aad;
-      color: #fff;}
-    
-    
-    .widget h3{
-      margin-top: 0;
-      background-color: #004aad;
-      color: #fff;
-    }
+.widget h3,
+.normalwidget h3 {
+  margin: 0;
+  background-color: #004aad;
+  color: #fff;
+  padding: 5px;
+}
+
+.normalwidget {
+  height: 200px;
+}
+
+.full-image {
+  width: 100%;
+  height: auto;
+}
