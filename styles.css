@@ -84,6 +84,7 @@ nav {
   padding: 10px 20px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  width:100%;
 }
 
 .hamburger:hover {
@@ -103,7 +104,7 @@ nav {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 150px;
     left: 0;
     width: 100%;
     background: #ffffff;
