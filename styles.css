@@ -227,6 +227,11 @@ form textarea:focus {
   font-size: 20px;
   color: #fff;
 }
+.custom-header {
+  font-family: "TiroBangla", sans-serif;
+  font-size: 20px;
+  color:#004aad;
+}
 
 .customtd {
   text-align: center;
