@@ -300,15 +300,18 @@ form textarea:focus {
   width: 100%;
   height: auto;
 }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+.gallery {
+            display: flex;
+            flex-wrap: wrap; /* This allows the items to wrap onto the next line */
             gap: 16px;
             padding: 16px;
+            justify-content: center; /* Center the items horizontally */
         }
 
         .gallery-item {
             position: relative;
+            width: 300px; /* Fixed width of each image */
+            height: 200px; /* Fixed height for images */
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -322,8 +325,8 @@ form textarea:focus {
 
         .gallery-item img {
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the full width and height of the container */
             transition: opacity 0.3s ease;
         }
 
