@@ -365,6 +365,8 @@ form textarea:focus {
             border: none;
             display: inline-block;
             text-align: center;
+            height: 50px;
+            border-radius: 30px;
         }
         .button:hover {
             background-color: #00388d;
