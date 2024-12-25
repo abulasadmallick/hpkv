@@ -14,7 +14,7 @@ body {
 
 /* Header Styles */
 header {
-  background: #004aad;
+  background: #fff;
   color: white;
   padding: 0px 0;
   text-align: center;
@@ -225,7 +225,7 @@ form textarea:focus {
 .custom-marquee {
   font-family: "TiroBangla", sans-serif;
   font-size: 20px;
-  color: #fff;
+  color: #004aad;
 }
 .custom-header {
   font-family: "TiroBangla", sans-serif;
