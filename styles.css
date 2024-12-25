@@ -354,3 +354,18 @@ form textarea:focus {
         .gallery-item:hover .overlay {
             display: block;
         }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            background-color: #004aad;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #00388d;
+        }
