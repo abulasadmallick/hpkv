@@ -493,40 +493,52 @@
   <footer>
     <p>&copy; 2024 Hanspukuria Vidyapith. All rights reserved.</p>
   </footer>
-      <script>
-function prevSlide(sliderId) {
-  const slides = document.getElementById(sliderId);
-  const slidesArray = Array.from(slides.children);
-  const firstSlide = slidesArray[0];
-  slides.appendChild(firstSlide); // Move the first slide to the end
-  slides.style.transform = `translateX(-${firstSlide.clientWidth}px)`;
-  setTimeout(() => {
-    slides.style.transition = 'none';
-    slides.appendChild(firstSlide); // Reset to avoid layout jumping
-    slides.style.transform = 'translateX(0)';
-    setTimeout(() => {
-      slides.style.transition = 'transform 0.5s ease-in-out'; // Resume smooth transitions
-    });
-  }, 500);
-}
+<script>
+  // Function to move to the previous slide
+  function prevSlide(sliderId) {
+    const slides = document.getElementById(sliderId);
+    const totalSlides = slides.children.length;
+    const slideWidth = slides.children[0].clientWidth;
+    const currentTransform = Math.abs(parseInt(slides.style.transform.replace('translateX(', '')) || 0);
+    const newTransform = currentTransform - slideWidth;
 
-function nextSlide(sliderId) {
-  const slides = document.getElementById(sliderId);
-  const slidesArray = Array.from(slides.children);
-  const lastSlide = slidesArray[slidesArray.length - 1];
-  slides.insertBefore(lastSlide, slidesArray[0]); // Move the last slide to the front
-  slides.style.transform = `translateX(-${lastSlide.clientWidth}px)`;
-  setTimeout(() => {
-    slides.style.transition = 'none';
-    slides.insertBefore(lastSlide, slides.children[0]); // Reset
-    slides.style.transform = 'translateX(0)';
-    setTimeout(() => {
-      slides.style.transition = 'transform 0.5s ease-in-out'; // Resume smooth transitions
-    });
-  }, 500);
-}
+    // If at the first slide, loop to the last one
+    if (newTransform >= totalSlides * slideWidth) {
+      slides.style.transform = `translateX(0px)`;
+    } else {
+      slides.style.transform = `translateX(-${newTransform}px)`;
+    }
+  }
 
+  // Function to move to the next slide
+  function nextSlide(sliderId) {
+    const slides = document.getElementById(sliderId);
+    const slideWidth = slides.children[0].clientWidth;
+    const totalSlides = slides.children.length;
+    const currentTransform = Math.abs(parseInt(slides.style.transform.replace('translateX(', '')) || 0);
+    const newTransform = currentTransform + slideWidth;
 
-  </script>
+    // If at the last slide, loop to the first one
+    if (newTransform >= totalSlides * slideWidth) {
+      slides.style.transform = `translateX(0px)`;
+    } else {
+      slides.style.transform = `translateX(-${newTransform}px)`;
+    }
+  }
+
+  // Function to start the automatic slideshow
+  function startAutoSlide(sliderId) {
+    setInterval(() => {
+      nextSlide(sliderId);
+    }, 5000); // Every 5 seconds
+  }
+
+  // Call the auto slide function for both sliders
+  document.addEventListener("DOMContentLoaded", function () {
+    startAutoSlide('footballslides');
+    startAutoSlide('memoryslides');
+  });
+</script>
+
 </body>
 </html>
