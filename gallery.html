@@ -485,5 +485,31 @@
   <footer>
     <p>&copy; 2024 Hanspukuria Vidyapith. All rights reserved.</p>
   </footer>
+      <script>
+    let currentIndex = 0;
+    const slides = document.getElementById('slides');
+    const images = slides.querySelectorAll('img');
+
+    function showSlide(index) {
+      if (index >= images.length) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = images.length - 1;
+      } else {
+        currentIndex = index;
+      }
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
+  </script>
 </body>
 </html>
