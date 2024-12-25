@@ -496,15 +496,36 @@
       <script>
 function prevSlide(sliderId) {
   const slides = document.getElementById(sliderId);
-  const maxScroll = slides.scrollWidth - slides.clientWidth;
-  slides.scrollLeft = slides.scrollLeft === 0 ? maxScroll : slides.scrollLeft - slides.clientWidth;
+  const slidesArray = Array.from(slides.children);
+  const firstSlide = slidesArray[0];
+  slides.appendChild(firstSlide); // Move the first slide to the end
+  slides.style.transform = `translateX(-${firstSlide.clientWidth}px)`;
+  setTimeout(() => {
+    slides.style.transition = 'none';
+    slides.appendChild(firstSlide); // Reset to avoid layout jumping
+    slides.style.transform = 'translateX(0)';
+    setTimeout(() => {
+      slides.style.transition = 'transform 0.5s ease-in-out'; // Resume smooth transitions
+    });
+  }, 500);
 }
 
 function nextSlide(sliderId) {
   const slides = document.getElementById(sliderId);
-  const maxScroll = slides.scrollWidth - slides.clientWidth;
-  slides.scrollLeft = slides.scrollLeft === maxScroll ? 0 : slides.scrollLeft + slides.clientWidth;
+  const slidesArray = Array.from(slides.children);
+  const lastSlide = slidesArray[slidesArray.length - 1];
+  slides.insertBefore(lastSlide, slidesArray[0]); // Move the last slide to the front
+  slides.style.transform = `translateX(-${lastSlide.clientWidth}px)`;
+  setTimeout(() => {
+    slides.style.transition = 'none';
+    slides.insertBefore(lastSlide, slides.children[0]); // Reset
+    slides.style.transform = 'translateX(0)';
+    setTimeout(() => {
+      slides.style.transition = 'transform 0.5s ease-in-out'; // Resume smooth transitions
+    });
+  }, 500);
 }
+
 
   </script>
 </body>
