@@ -85,7 +85,7 @@
         <h2 class="custom-header" align="center">ফুটবল ম্যাচ প্রদর্শনী</h2>
              <!-- Image Slider -->
     <div class="slider">
-      <div class="slides" id="slides">
+      <div class="slides" id="footballslides">
         <img src="images/uploads/75(1).jpg" alt="Image 1">
         <img src="images/uploads/75 (2).jpg" alt="Image 2">
         <img src="images/uploads/75 (3).jpg" alt="Image 3">
@@ -107,8 +107,8 @@
         <img src="images/uploads/75 (18).jpg" alt="Image 18">
         </div>
       <div class="slider-buttons">
-        <button onclick="prevSlide()">&#10094;</button>
-        <button onclick="nextSlide()">&#10095;</button>
+        <button onclick="prevSlide(footballslides)">&#10094;</button>
+        <button onclick="nextSlide(footballslides)">&#10095;</button>
       </div></div>
       
 <div class="gallery">
@@ -190,7 +190,7 @@
       <h2>Old Memomories</h2>
              <!-- Image Slider -->
     <div class="slider">
-      <div class="slides" id="slides">
+      <div class="slides" id="memoryslides">
         <img src="images/uploads/(1).jpg" alt="Image 19">
         <img src="images/uploads/(2).jpg" alt="Image 20">
         <img src="images/uploads/(3).jpg" alt="Image 21">
@@ -229,8 +229,8 @@
 
       </div>
       <div class="slider-buttons">
-        <button onclick="prevSlide()">&#10094;</button>
-        <button onclick="nextSlide()">&#10095;</button>
+        <button onclick="prevSlide(memoryslides)">&#10094;</button>
+        <button onclick="nextSlide(memoryslides)">&#10095;</button>
       </div></div>
     <div class="gallery">
       
@@ -494,30 +494,18 @@
     <p>&copy; 2024 Hanspukuria Vidyapith. All rights reserved.</p>
   </footer>
       <script>
-    let currentIndex = 0;
-    const slides = document.getElementById('slides');
-    const images = slides.querySelectorAll('img');
+function prevSlide(sliderId) {
+  const slides = document.getElementById(sliderId);
+  const maxScroll = slides.scrollWidth - slides.clientWidth;
+  slides.scrollLeft = slides.scrollLeft === 0 ? maxScroll : slides.scrollLeft - slides.clientWidth;
+}
 
-    function showSlide(index) {
-      if (index >= images.length) {
-        currentIndex = 0;
-      } else if (index < 0) {
-        currentIndex = images.length - 1;
-      } else {
-        currentIndex = index;
-      }
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+function nextSlide(sliderId) {
+  const slides = document.getElementById(sliderId);
+  const maxScroll = slides.scrollWidth - slides.clientWidth;
+  slides.scrollLeft = slides.scrollLeft === maxScroll ? 0 : slides.scrollLeft + slides.clientWidth;
+}
 
-    function nextSlide() {
-      showSlide(currentIndex + 1);
-    }
-
-    function prevSlide() {
-      showSlide(currentIndex - 1);
-    }
-
-    setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
   </script>
 </body>
 </html>
