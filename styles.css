@@ -91,11 +91,13 @@ nav {
   background-color: #003b8e;
 }
 
+.headerimg{width:70%;}
+
 @media (max-width: 768px) {
   .hamburger {
     display: inline-block;
   }
-
+.headerimg{width:100%;}
   .logo {
     font-size: 20px;
   }
