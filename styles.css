@@ -296,6 +296,7 @@ form textarea:focus {
   background-color: #004aad;
   color: #fff;
   padding: 5px;
+  text-align: left;
 }
 
 .normalwidget {
