@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Hanspukuria Vidyapith. Explore our educational offerings, activities, and achievements.">
+  <meta name="keywords" content="Hanspukuria Vidyapith, education, school, learning, Nadia">
+  <meta name="author" content="Hanspukuria Vidyapith Team">
+  <title>Hanspukuria Vidyapith - Academics</title>
+  <link rel="icon" type="image/x-icon" href="images/hpkvico.ico">
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="script.js" defer=""></script>
+ 
+</head>
+
+  
+  <body>
+  
+    
+    <header>
+    <div onclick="window.location.href='index.html';" style="cursor: pointer;">
+    <img src="images/header.jpg" class="headerimg" />
+</div>
+    <marquee class="custom-marquee">আমাদের বিদ্যালয়ের প্লাটিনাম জয়ন্তী উদযাপিত হতে চলেছে। আপনাদের সহযোগিতা একান্তভাবে কামনা করি।</marquee>
+  </header>
+
+  <nav>
+    <ul class="menu" id="menu">
+      <li><i class="fa-solid fa-house" style="color: white;"></i><a href="index.html"> Home</a></li>
+      <li><i class="fa-solid fa-school" style="color: white;"></i><a href="about.html"> About School</a></li>
+      <li><i class="fa-solid fa-book" style="color: white;"></i><a href="academics.html"> Academics</a></li>
+      <li><i class="fa-solid fa-chalkboard-teacher" style="color: white;"></i><a href="staff.html"> Staff</a></li>
+      <li><i class="fa-solid fa-images" style="color: white;"></i><a href="gallery.html"> Gallery</a></li>
+      <li><i class="fa-solid fa-bell" style="color: white;"></i><a href="notice.html"> Notice</a></li>
+      <li><i class="fa-solid fa-envelope" style="color: white;"></i><a href="contact.html"> Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <main>
+    <h1>Academics</h1>
+      <div class="content-container">
+     
+    <div class="left-div">
+<table>
+    <tr>
+        <th>ক্রমিক নং</th>
+        <th>ছুটির উপলক্ষ</th>
+        <th>তারিখ</th>
+        <th>বার</th>
+        <th>ছুটির দিন সংখ্যা</th>
+        <th>মন্তব্য</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>ইংরেজী নববর্ষ</td>
+        <td>০১.০১.২০২৫</td>
+        <td>বুধবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>স্বামী বিবেকানন্দ জয়ন্তী</td>
+        <td>১২. ০১. ২০২৫</td>
+        <td>রবিবার</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>নেতাজী সুভাষ জয়ন্তী</td>
+        <td>২৩. ০১. ২০২৫</td>
+        <td>বৃহস্পতিবার</td>
+        <td>1</td>
+        <td>ছুটি / (পালনীয়)</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>সাধারনতন্ত্র দিবস</td>
+        <td>২৬. ০১. ২০২৫</td>
+        <td>রবিবার</td>
+        <td>-</td>
+        <td>(পালনীয়)</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>সরস্বতী পূজা</td>
+        <td>০২. ০২. ২০২৫</td>
+        <td>রবিবার</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>সরস্বতী পূজার পরের দিন</td>
+        <td>০৩.০২. ২০২৫</td>
+        <td>সোমবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>ঠাকুর পঞ্চানন বর্মার জন্মদিবস ও সবে-ই-বরাত</td>
+        <td>১৪.০২.২০২৫</td>
+        <td>শুক্রবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>শিবরাত্রি</td>
+        <td>২৬. ০২. ২০২৫</td>
+        <td>বুধবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>দোলযাত্রা ও হোলি</td>
+        <td>১৪. ০৩. ২০২৫</td>
+        <td>শুক্রবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>দোলযাত্রার পরের দিন</td>
+        <td>১৫. ০৩. ২০২৫</td>
+        <td>শনিবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>শ্রী শ্রী হরিচাঁদ ঠাকুরের জন্মদিবস</td>
+        <td>২৭. ০৩. ২০২৫</td>
+        <td>বৃহস্পতিবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>ঈদ-উল-ফিতর</td>
+        <td>৩১.০৩. ২০২৫</td>
+        <td>সোমবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>ঈদ-উল-ফিতর এর পরের দিন</td>
+        <td>০১. ০৪. ২০২৫</td>
+        <td>মঙ্গলবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>রামনবমী</td>
+        <td>০৬. ০৪. ২০২৫</td>
+        <td>রবিবার</td>
+        <td></td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>মহাবীর জয়ন্তী</td>
+        <td>১০. ০৪. ২০২৫</td>
+        <td>বৃহস্পতিবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>ডঃ বি. আর. আম্বেদকরের জন্মদিন</td>
+        <td>১৪. ০৪. ২০২৫</td>
+        <td>সোমবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>বাংলা নবরর্ষ</td>
+        <td>১৫. ০৪. ২০২৫</td>
+        <td>মঙ্গলবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>গুড ফ্রাইডে</td>
+        <td>১৮. ০৪. ২০২৫</td>
+        <td>শুক্রবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>মে দিবস</td>
+        <td>০১.০৫. ২০২৫</td>
+        <td>বৃহস্পতিবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>রবীন্দ্র জয়ন্তী</td>
+        <td>০৯.০৫. ২০২৫</td>
+        <td>শুক্রবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>গ্রীষ্মবকাশ</td>
+        <td>১২.০৫. ২০২৫ থেকে ২৩.০৫. ২০২৫</td>
+        <td>সোমবার থেকে শুক্রবার</td>
+        <td>11</td>
+        <td>গ্রীষ্মবকাশ</td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>বুদ্ধ পূর্ণিমা ও পন্ডিত রঘুনাথ মুর্মুর জন্মদিবস</td>
+        <td>১২.০৫. ২০২৫</td>
+        <td>সোমবার</td>
+        <td>-</td>
+        <td>গ্রীষ্মবকাশের অন্তর্গত</td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>ঈদ-উদ-জ্জোহা (বকরি ঈদ) এর আগের দিন</td>
+        <td>০৬. ০৬. ২০২৫</td>
+        <td>শুক্রবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>ঈদ-উদ-জ্জোহা (বকরি ঈদ)</td>
+        <td>০৭.০৬. ২০২৫</td>
+        <td>শনিবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td>রথযাত্রা</td>
+        <td>২৭. ০৬. ২০২৫</td>
+        <td>শুক্রবার</td>
+        <td>1</td>
+        <td>ছুটি / (পালনীয়)</td>
+    </tr>
+    <tr>
+        <td>26</td>
+        <td>মহরম</td>
+        <td>০৬. ০৭. ২০২৫</td>
+        <td>রবিবার</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td>রাখী বন্ধন</td>
+        <td>০৯.০৮. ২০২৫</td>
+        <td>শনিবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td>স্বাধীনতা ও জন্মাষ্টমী</td>
+        <td>১৫. ০৮. ২০২৫</td>
+        <td>শুক্রবার</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td>ফতেয়া-দোয়াজ-দাহাম</td>
+        <td>০৫.০৯. ২০২৫</td>
+        <td>শুক্রবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>মহালয়া</td>
+        <td>২১.০৯. ২০২৫</td>
+        <td>রবিবার</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>পূজাবকাশ (চতুর্থী থেকে ভ্রাতৃদ্বিতীয়ার পরের দিন পর্যন্ত)</td>
+        <td>২৬. ০৯. ২০২৫ থেকে ২৪. ১০. ২০২৫</td>
+        <td>শুক্রবার থেকে শুক্রবার</td>
+        <td>25</td>
+        <td>পূজাবকাশ</td>
+    </tr>
+    <tr>
+        <td>32</td>
+        <td>গান্ধী জয়ন্তী</td>
+        <td>০২. ১০. ২০২৫</td>
+        <td>বৃহস্পতিবার</td>
+        <td>-</td>
+        <td>পূজাবকাশের অন্তর্গত</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td>ছট পূজা</td>
+        <td>২৭. ১০. ২০২৫</td>
+        <td>সোমবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>34</td>
+        <td>ছট পূজা (অতিরিক্ত দিন)</td>
+        <td>২৮. ১০. ২০২৫</td>
+        <td>মঙ্গলবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>35</td>
+        <td>গুরুনানকের জন্মদিবস / পার্শনাথের রথযাত্রা</td>
+        <td>০৫. ১১. ২০২৫</td>
+        <td>বুধবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>36</td>
+        <td>বিরসা মুন্ডার জন্মদিবস</td>
+        <td>১৫. ১১. ২০২৫</td>
+        <td>শনিবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td>বড়দিন</td>
+        <td>২৫. ১২. ২০২৪</td>
+        <td>বৃহস্পতিবার</td>
+        <td>1</td>
+        <td>ছুটি</td>
+    </tr>
+    <tr>
+        <td>38</td>
+        <td>প্রধান শিক্ষকের বিবেচনাধীন</td>
+        <td></td>
+        <td></td>
+        <td>2</td>
+        <td>ছুটি</td>
+    </tr>
+</table>
+    </div>
+
+      
+      
+    <div class="right-div">
+<div class="widget">
+  <style>
+    .widget h3 {
+      margin: 5px 0; /* Small gap above and below each heading */
+      border-radius: 5px;
+    }
+    .widget h3 a {
+      text-decoration: none; /* Optional: Remove underline from links */
+      color: white;
+    }
+  </style>
+     <h3><i class="fa-solid fa-house" style="color: white;"></i><a href="index.html"> Home</a></h3>
+      <h3><i class="fa-solid fa-school" style="color: white;"></i><a href="about.html"> About School</a></h3>
+      <h3><i class="fa-solid fa-book" style="color: white;"></i><a href="academics.html"> Academics</a></h3>
+      <h3><i class="fa-solid fa-chalkboard-teacher" style="color: white;"></i><a href="staff.html"> Staff</a></h3>
+      <h3><i class="fa-solid fa-images" style="color: white;"></i><a href="gallery.html"> Gallery</a></h3>
+      <h3><i class="fa-solid fa-bell" style="color: white;"></i><a href="notice.html"> Notice</a></h3>
+      <h3><i class="fa-solid fa-envelope" style="color: white;"></i><a href="contact.html"> Contact Us</a></h3>
+
+</div>
+        <div class="normalwidget">
+          <h3>Upcoming Events</h3>
+          <p>Stay tuned for our Platinum Jubilee celebrations!</p>
+        </div>
+        
+        
+        <div class="normalwidget">
+          <h3>Notice Board</h3>
+          <ul><li><p>New academic session starts from 02/01/2025.</p></li>
+          <li><p>Final Result will be declared on 23/12/2024</p></li></ul>
+        </div>
+        
+        
+        <div class="widget">
+          <h3>Find us on Social Media</h3>
+            <a href="https://www.facebook.com/profile.php?id=61550229509787&mibextid=ZbWKwL"><i class="fab fa-facebook-square fa-3x" aria-hidden="true" color="blue"></i></a>
+            <a href="https://youtu.be/VGhrF5WI87g?si=9LvkJ9nJQg8N3uB0"><i class="fab fa-youtube-square fa-3x" aria-hidden="true" color="red"></i></a>
+            <a href="https://chat.whatsapp.com/BomxwcdPHGm3kYPdQyKeaI"><i class="fab fa-whatsapp-square fa-3x" style="color: #25d366;"></i></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Hanspukuria Vidyapith. All rights reserved.</p>
+  </footer>
+</body>
+</html>
