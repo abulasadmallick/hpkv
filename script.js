@@ -93,3 +93,13 @@ fetch('sidebar.html')
         .then(data => { 
             document.getElementById('sidebar-container').innerHTML = data; 
         }); 
+
+  // Load the header
+  fetch('header.html')
+    .then(response => response.text())
+    .then(headerdata => {
+      document.getElementById('header-container').innerHTML = headerdata;
+    })
+    .catch(error => console.error('Error loading header:', error));
+
+
