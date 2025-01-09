@@ -94,12 +94,19 @@ fetch('sidebar.html')
             document.getElementById('sidebar-container').innerHTML = data; 
         }); 
 
-  // Load the header
-  fetch('header.html')
-    .then(response => response.text())
-    .then(headerdata => {
-      document.getElementById('header-container').innerHTML = headerdata;
-    })
-    .catch(error => console.error('Error loading header:', error));
+document.addEventListener("DOMContentLoaded", () => {
+    // Fetch and insert the header
+    fetch("header.html")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.text();
+      })
+      .then(data => {
+        document.getElementById("header-container").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading header:", error));
+  });
 
 
