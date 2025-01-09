@@ -94,19 +94,9 @@ fetch('sidebar.html')
             document.getElementById('sidebar-container').innerHTML = data; 
         }); 
 
-document.addEventListener("DOMContentLoaded", () => {
-    // Fetch and insert the header
-    fetch("header.html")
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.text();
-      })
-      .then(data => {
-        document.getElementById("header-container").innerHTML = data;
-      })
-      .catch(error => console.error("Error loading header:", error));
-  });
-
+fetch('header.html') 
+        .then(response => response.text()) 
+        .then(data => { 
+            document.getElementById('header-container').innerHTML = data; 
+        }); 
 
