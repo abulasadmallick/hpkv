@@ -86,3 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Push an initial state to the history stack
     history.pushState(null, null, location.href);
+
+
+fetch('sidebar.html') 
+        .then(response => response.text()) 
+        .then(data => { 
+            document.getElementById('sidebar-container').innerHTML = data; 
+        }); 
