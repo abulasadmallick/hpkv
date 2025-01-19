@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,411 +10,263 @@
   <title>Hanspukuria Vidyapith - Gallery</title>
   <link rel="icon" type="image/x-icon" href="images/hpkvico.ico">
   <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="script.js" defer=""></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-    .fa {
-      font-size: 30px;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    /* Slider styles */
-    .slider {
-      position: relative;
-      width: 100%;
-      max-height: auto;
-      overflow: hidden;
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: left;
+        padding: 15px;
     }
 
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
+    .gallery img {
+        width: 300px;
+        height: 200px;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
     }
 
-    .slides img {
-      width: 100%;
-      height: auto;
+    .gallery img:hover {
+        transform: scale(1.05);
     }
 
-    .slider-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
     }
 
-    .slider-buttons button {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
+    .lightbox img {
+        width: 800px;
+        height: auto;
+        border-radius: 5px;
     }
-  </style>
+
+    .lightbox .controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        padding: 0 20px;
+    }
+
+    .lightbox .controls button {
+        background: rgba(255, 255, 255, 0.8);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 18px;
+        transition: background 0.2s;
+    }
+
+    .lightbox .controls button:hover {
+        background: rgba(255, 255, 255, 1);
+    }
+
+    .lightbox .close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: rgba(226, 5, 5, 0.8);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5%;
+        font-size: 18px;
+        transition: background 0.2s;
+    }
+
+    .lightbox .close:hover {
+        background: rgba(255, 255, 255, 1);
+    }
+    @media (max-width: 768px) {    .lightbox img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }}
+
+</style>
+
+
 </head>
 
   
   <body>
+  
+    
+    <div id="header-container"></div>
 
-    <header>
-    <div onclick="window.location.href='index.html';" style="cursor: pointer;">
-    <img src="images/header.jpg" class="headerimg" />
-</div>
-    <marquee class="custom-marquee">আমাদের বিদ্যালয়ের প্লাটিনাম জয়ন্তী উদযাপিত হতে চলেছে। আপনাদের সহযোগিতা একান্তভাবে কামনা করি।</marquee>
-  </header>
-
-  <nav>
-    <ul class="menu" id="menu">
-      <li><i class="fa-solid fa-house" style="color: white;"></i><a href="index.html"> Home</a></li>
-      <li><i class="fa-solid fa-school" style="color: white;"></i><a href="about.html"> About School</a></li>
-      <li><i class="fa-solid fa-book" style="color: white;"></i><a href="academics.html"> Academics</a></li>
-      <li><i class="fa-solid fa-chalkboard-teacher" style="color: white;"></i><a href="staff.html"> Staff</a></li>
-      <li><i class="fa-solid fa-images" style="color: white;"></i><a href="gallery.html"> Gallery</a></li>
-      <li><i class="fa-solid fa-bell" style="color: white;"></i><a href="notice.html"> Notice</a></li>
-      <li><i class="fa-solid fa-envelope" style="color: white;"></i><a href="contact.html"> Contact Us</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger">&#9776;</button>
-  </nav>
+    <nav>
+      <ul class="menu" id="menu">
+        <li><i class="fa-solid fa-house" style="color: white;"></i><a href="index.html"> Home</a></li>
+        <li><i class="fa-solid fa-school" style="color: white;"></i><a href="about.html"> About School</a></li>
+        <li><i class="fa-solid fa-book" style="color: white;"></i><a href="academics.html"> Academics</a></li>
+        <li><i class="fa-solid fa-chalkboard-teacher" style="color: white;"></i><a href="staff.html"> Staff</a></li>
+        <li><i class="fa-solid fa-images" style="color: white;"></i><a href="gallery.html"> Gallery</a></li>
+        <li><i class="fa-solid fa-bell" style="color: white;"></i><a href="notice.html"> Notice</a></li>
+        <li><i class="fa-solid fa-envelope" style="color: white;"></i><a href="contact.html"> Contact Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+    </nav>
+  
 
   <main>
-    <h1>Gallery</h1>
-    <div class="content-container">   
+    <div class="content-container">
+      
+      
+      
     <div class="left-div">
-       <h1 class="custom-header" align="center">গৌরবের ৭৫</h1><br>
-        <h2 class="custom-header" align="center">ফুটবল ম্যাচ প্রদর্শনী</h2>
-             <!-- Image Slider -->
-    
-      
-<div class="gallery">
-    <div class="gallery-item">
-        <img src="images/uploads/75(1).jpg" alt="Image 1">
-        <div class="overlay">Image 1</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (2).jpg" alt="Image 2">
-        <div class="overlay">Image 2</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (3).jpg" alt="Image 3">
-        <div class="overlay">Image 3</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (4).jpg" alt="Image 4">
-        <div class="overlay">Image 4</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (5).jpg" alt="Image 5">
-        <div class="overlay">Image 5</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (6).jpg" alt="Image 6">
-        <div class="overlay">Image 6</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (7).jpg" alt="Image 7">
-        <div class="overlay">Image 7</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (8).jpg" alt="Image 8">
-        <div class="overlay">Image 8</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (9).jpg" alt="Image 9">
-        <div class="overlay">Image 9</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (10).jpg" alt="Image 10">
-        <div class="overlay">Image 10</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (11).jpg" alt="Image 11">
-        <div class="overlay">Image 11</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (12).jpg" alt="Image 12">
-        <div class="overlay">Image 12</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (13).jpg" alt="Image 13">
-        <div class="overlay">Image 13</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (14).jpg" alt="Image 14">
-        <div class="overlay">Image 14</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (15).jpg" alt="Image 15">
-        <div class="overlay">Image 15</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (16).jpg" alt="Image 16">
-        <div class="overlay">Image 16</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (17).jpg" alt="Image 17">
-        <div class="overlay">Image 17</div>
-    </div>
-    <div class="gallery-item">
-        <img src="images/uploads/75 (18).jpg" alt="Image 18">
-        <div class="overlay">Image 18</div>
-    </div>
- 
- 
- </div>
-      <h2>Old Memomories</h2>
+        <h1 style="font-family:'TiroBangla';text-align: center;">গৌরবের ৭৫</h1><br>
 
-    <div class="gallery">
-      
-        <!-- Gallery Items (Images (1).jpg to (34).jpg) -->
+        <h1 style="font-family:'TiroBangla'; text-align: center;">প্রদর্শনী ফুটবল ম্যাচ</h1><br/>
+        <div class="gallery">
+          <img src="images/uploads/75(1).jpg" alt="Image 1">
+          <img src="images/uploads/75 (2).jpg" alt="Image 2">
+          <img src="images/uploads/75 (3).jpg" alt="Image 3">
+          <img src="images/uploads/75 (4).jpg" alt="Image 4">
+          <img src="images/uploads/75 (5).jpg" alt="Image 5">
+          <img src="images/uploads/75 (6).jpg" alt="Image 6">
+          <img src="images/uploads/75 (7).jpg" alt="Image 7">
+          <img src="images/uploads/75 (8).jpg" alt="Image 8">
+          <img src="images/uploads/75 (9).jpg" alt="Image 9">
+          <img src="images/uploads/75 (10).jpg" alt="Image 10">
+          <img src="images/uploads/75 (11).jpg" alt="Image 11">
+          <img src="images/uploads/75 (12).jpg" alt="Image 12">
+          <img src="images/uploads/75 (13).jpg" alt="Image 13">
+          <img src="images/uploads/75 (14).jpg" alt="Image 14">
+          <img src="images/uploads/75 (15).jpg" alt="Image 15">
+          <img src="images/uploads/75 (16).jpg" alt="Image 16">
+          <img src="images/uploads/75 (17).jpg" alt="Image 17">
+          <img src="images/uploads/75 (18).jpg" alt="Image 18">
+        </div>
+          <h1 style="text-align: center;">Old Memories</h1><br>
+        <div class="gallery">
+          
+          <img src="images/uploads/(1).jpg" alt="Image 1">
+          <img src="images/uploads/(2).jpg" alt="Image 2">
+          <img src="images/uploads/(3).jpg" alt="Image 3">
+          <img src="images/uploads/(4).jpg" alt="Image 4">
+          <img src="images/uploads/(5).jpg" alt="Image 5">
+          <img src="images/uploads/(6).jpg" alt="Image 6">
+          <img src="images/uploads/(7).jpg" alt="Image 7">
+          <img src="images/uploads/(8).jpg" alt="Image 8">
+          <img src="images/uploads/(9).jpg" alt="Image 9">
+          <img src="images/uploads/(10).jpg" alt="Image 10">
+          <img src="images/uploads/(11).jpg" alt="Image 11">
+          <img src="images/uploads/(12).jpg" alt="Image 12">
+          <img src="images/uploads/(13).jpg" alt="Image 13">
+          <img src="images/uploads/(14).jpg" alt="Image 14">
+          <img src="images/uploads/(15).jpg" alt="Image 15">
+          <img src="images/uploads/(16).jpg" alt="Image 16">
+          <img src="images/uploads/(17).jpg" alt="Image 17">
+          <img src="images/uploads/(18).jpg" alt="Image 18">
+          <img src="images/uploads/(19).jpg" alt="Image 19">
+          <img src="images/uploads/(20).jpg" alt="Image 20">
+          <img src="images/uploads/(21).jpg" alt="Image 21">
+          <img src="images/uploads/(22).jpg" alt="Image 22">
+          <img src="images/uploads/(23).jpg" alt="Image 23">
+          <img src="images/uploads/(24).jpg" alt="Image 24">
+          <img src="images/uploads/(25).jpg" alt="Image 25">
+          <img src="images/uploads/(26).jpg" alt="Image 26">
+          <img src="images/uploads/(27).jpg" alt="Image 27">
+          <img src="images/uploads/(28).jpg" alt="Image 28">
+          <img src="images/uploads/(29).jpg" alt="Image 29">
+          <img src="images/uploads/(30).jpg" alt="Image 30">
+          
+        </div>
         
-        <!-- Loop for Images 1.jpg to 34.jpg -->
-        <!-- Image 1 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(1).jpg" alt="Image 1">
-            <div class="overlay">Image 1</div>
+        <div class="lightbox">
+            <button class="close">&times;</button>
+            <img src="" alt="">
+            <div class="controls">
+                <button class="prev">&#9664;</button>
+                <button class="next">&#9654;</button>
+            </div>
         </div>
-
-        <!-- Image 2 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(2).jpg" alt="Image 2">
-            <div class="overlay">Image 2</div>
-        </div>
-
-        <!-- Image 3 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(3).jpg" alt="Image 3">
-            <div class="overlay">Image 3</div>
-        </div>
-
-        <!-- Image 4 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(4).jpg" alt="Image 4">
-            <div class="overlay">Image 4</div>
-        </div>
-
-        <!-- Image 5 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(5).jpg" alt="Image 5">
-            <div class="overlay">Image 5</div>
-        </div>
-
-        <!-- Image 6 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(6).jpg" alt="Image 6">
-            <div class="overlay">Image 6</div>
-        </div>
-
-        <!-- Image 7 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(7).jpg" alt="Image 7">
-            <div class="overlay">Image 7</div>
-        </div>
-
-        <!-- Image 8 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(8).jpg" alt="Image 8">
-            <div class="overlay">Image 8</div>
-        </div>
-
-        <!-- Image 9 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(9).jpg" alt="Image 9">
-            <div class="overlay">Image 9</div>
-        </div>
-
-        <!-- Image 10 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(10).jpg" alt="Image 10">
-            <div class="overlay">Image 10</div>
-        </div>
-
-        <!-- Image 11 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(11).jpg" alt="Image 11">
-            <div class="overlay">Image 11</div>
-        </div>
-
-        <!-- Image 12 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(12).jpg" alt="Image 12">
-            <div class="overlay">Image 12</div>
-        </div>
-
-        <!-- Image 13 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(13).jpg" alt="Image 13">
-            <div class="overlay">Image 13</div>
-        </div>
-
-        <!-- Image 14 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(14).jpg" alt="Image 14">
-            <div class="overlay">Image 14</div>
-        </div>
-
-        <!-- Image 15 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(15).jpg" alt="Image 15">
-            <div class="overlay">Image 15</div>
-        </div>
-
-        <!-- Image 16 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(16).jpg" alt="Image 16">
-            <div class="overlay">Image 16</div>
-        </div>
-
-        <!-- Image 17 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(17).jpg" alt="Image 17">
-            <div class="overlay">Image 17</div>
-        </div>
-
-        <!-- Image 18 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(18).jpg" alt="Image 18">
-            <div class="overlay">Image 18</div>
-        </div>
-
-        <!-- Image 19 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(19).jpg" alt="Image 19">
-            <div class="overlay">Image 19</div>
-        </div>
-
-        <!-- Image 20 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(20).jpg" alt="Image 20">
-            <div class="overlay">Image 20</div>
-        </div>
-
-        <!-- Image 21 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(21).jpg" alt="Image 21">
-            <div class="overlay">Image 21</div>
-        </div>
-
-        <!-- Image 22 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(22).jpg" alt="Image 22">
-            <div class="overlay">Image 22</div>
-        </div>
-
-        <!-- Image 23 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(23).jpg" alt="Image 23">
-            <div class="overlay">Image 23</div>
-        </div>
-
-        <!-- Image 24 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(24).jpg" alt="Image 24">
-            <div class="overlay">Image 24</div>
-        </div>
-
-        <!-- Image 25 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(25).jpg" alt="Image 25">
-            <div class="overlay">Image 25</div>
-        </div>
-
-        <!-- Image 26 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(26).jpg" alt="Image 26">
-            <div class="overlay">Image 26</div>
-        </div>
-
-        <!-- Image 27 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(27).jpg" alt="Image 27">
-            <div class="overlay">Image 27</div>
-        </div>
-
-        <!-- Image 28 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(28).jpg" alt="Image 28">
-            <div class="overlay">Image 28</div>
-        </div>
-
-        <!-- Image 29 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(29).jpg" alt="Image 29">
-            <div class="overlay">Image 29</div>
-        </div>
-
-        <!-- Image 30 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(30).jpg" alt="Image 30">
-            <div class="overlay">Image 30</div>
-        </div>
-
-        <!-- Image 31 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(31).jpg" alt="Image 31">
-            <div class="overlay">Image 31</div>
-        </div>
-
-        <!-- Image 32 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(32).jpg" alt="Image 32">
-            <div class="overlay">Image 32</div>
-        </div>
-
-        <!-- Image 33 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(33).jpg" alt="Image 33">
-            <div class="overlay">Image 33</div>
-        </div>
-
-        <!-- Image 34 -->
-        <div class="gallery-item">
-            <img src="images/uploads/(34).jpg" alt="Image 34">
-            <div class="overlay">Image 34</div>
-        </div>
+        
+        <script>
+            const gallery = document.querySelectorAll('.gallery img');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = lightbox.querySelector('img');
+            const prevBtn = lightbox.querySelector('.prev');
+            const nextBtn = lightbox.querySelector('.next');
+            const closeBtn = lightbox.querySelector('.close');
+        
+            let currentIndex = 0;
+        
+            const openLightbox = (index) => {
+                currentIndex = index;
+                lightboxImg.src = gallery[index].src;
+                lightbox.style.display = 'flex';
+            };
+        
+            const closeLightbox = () => {
+                lightbox.style.display = 'none';
+            };
+        
+            const showPrevImage = () => {
+                currentIndex = (currentIndex - 1 + gallery.length) % gallery.length;
+                lightboxImg.src = gallery[currentIndex].src;
+            };
+        
+            const showNextImage = () => {
+                currentIndex = (currentIndex + 1) % gallery.length;
+                lightboxImg.src = gallery[currentIndex].src;
+            };
+        
+            gallery.forEach((img, index) => {
+                img.addEventListener('click', () => openLightbox(index));
+            });
+        
+            closeBtn.addEventListener('click', closeLightbox);
+            prevBtn.addEventListener('click', showPrevImage);
+            nextBtn.addEventListener('click', showNextImage);
+        
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+        
+            document.addEventListener('keydown', (e) => {
+                if (lightbox.style.display === 'flex') {
+                    if (e.key === 'ArrowLeft') showPrevImage();
+                    if (e.key === 'ArrowRight') showNextImage();
+                    if (e.key === 'Escape') closeLightbox();
+                }
+            });
+        </script>
 
     </div>
-
-
 
       
-    
-    </div>
-<div class="right-div">
- <div id="sidebar-container"></div>
-      </div>
-    </div>
+      
+    <div class="right-div">
+      <div id="sidebar-container"></div> 
+     </div>
   </main>
 
   <footer>
     <p>&copy; 2024 Hanspukuria Vidyapith. All rights reserved.</p>
   </footer>
-      <script>
-    let currentIndex = 0;
-    const slides = document.getElementById('slides');
-    const images = slides.querySelectorAll('img');
-
-    function showSlide(index) {
-      if (index >= images.length) {
-        currentIndex = 0;
-      } else if (index < 0) {
-        currentIndex = images.length - 1;
-      } else {
-        currentIndex = index;
-      }
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    function nextSlide() {
-      showSlide(currentIndex + 1);
-    }
-
-    function prevSlide() {
-      showSlide(currentIndex - 1);
-    }
-
-    setInterval(nextSlide, 10000); // Auto-slide every 10 seconds
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
