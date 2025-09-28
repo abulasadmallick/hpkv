@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Hanspukuria Vidyapith. Explore our educational offerings, activities, and achievements.">
+    <meta name="keywords" content="Hanspukuria Vidyapith, education, school, learning, Nadia">
+    <meta name="author" content="Hanspukuria Vidyapith Team">
+    <title>Hanspukuria Vidyapith - Calender 2025</title>
+    <link rel="icon" type="image/x-icon" href="images/hpkvico.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"s integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #004aad;
+        }
+
+        .calendar-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .month-section {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .month {
+            background-color: #004aad;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+
+        .weekdays, .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .weekdays li {
+            background-color: #f1f1f1;
+            font-weight: bold;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            border: 1px solid #f1f1f1;
+        }
+
+        .days li {
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px 0;
+            border: 1px solid #f1f1f1;
+            box-sizing: border-box;
+        }
+
+        li {
+            color: #004aad;
+        }
+
+        li.holiday {
+            color: red;
+        }
+
+        .hol-list-container {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .hol-list-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hol-list-container th {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+            width: 75px;
+        }
+
+        .hol-list-container td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+            color: #004aad;
+        }
+
+        .hol-list-container th {
+            background-color: #f0f0f0;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .calendar-container {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 10px;
+            }
+
+            .month-section {
+                margin-bottom: 20px;
+            }
+
+            .month {
+                font-size: 1.2em;
+                padding: 10px;
+            }
+
+            .weekdays li, .days li {
+                font-size: 25px;
+                padding: 8px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .calendar-container {
+                grid-template-columns: 1fr;
+            }
+
+            .month-section {
+                margin-bottom: 20px;
+            }
+
+            .month {
+                font-size: 1.1em;
+                padding: 8px;
+            }
+
+            .weekdays li, .days li {
+                font-size: 20px;
+                padding: 6px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+  
+    
+    <header>
+    <div onclick="window.location.href='index.html';" style="cursor: pointer;">
+    <img src="images/header.jpg" class="headerimg" />
+</div>
+    <marquee class="custom-marquee">আমাদের বিদ্যালয়ের প্লাটিনাম জয়ন্তী উদযাপিত হতে চলেছে। আপনাদের সহযোগিতা একান্তভাবে কামনা করি।</marquee>
+  </header>
+    
+
+  <nav>
+    <ul class="menu" id="menu">
+      <li><i class="fa-solid fa-house" style="color: white;"></i><a href="index.html"> Home</a></li>
+      <li><i class="fa-solid fa-school" style="color: white;"></i><a href="about.html"> About School</a></li>
+      <li><i class="fa-solid fa-book" style="color: white;"></i><a href="academics.html"> Academics</a></li>
+      <li><i class="fa-solid fa-chalkboard-teacher" style="color: white;"></i><a href="staff.html"> Staff</a></li>
+      <li><i class="fa-solid fa-images" style="color: white;"></i><a href="gallery.html"> Gallery</a></li>
+      <li><i class="fa-solid fa-bell" style="color: white;"></i><a href="notice.html"> Notice</a></li>
+      <li><i class="fa-solid fa-envelope" style="color: white;"></i><a href="contact.html"> Contact Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <main>
+    <div class="content-container">
+      
+      
+      
+    <div class="left-div">
+<h1 style="text-align:center;">Calender 2025</h1>
+<div class="calendar-container">
+
+    <!-- January -->
+    <div class="month-section">
+      <div class="month">January</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="holiday">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="holiday">5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li class="holiday">12</li>
+        <li>13</li>
+        <li>14</li>
+        <li class="holiday">15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li class="holiday">19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li class="holiday">23</li>
+        <li>24</li>
+        <li>25</li>
+        <li class="holiday">26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Jan 01</th>
+              <td>New Year Day</td>
+            </tr>
+            <tr>
+              <th>Jan 15</th>
+              <td>Elar-Mela</td>
+            </tr>
+            <tr>
+              <th>Jan 23</th>
+              <td>Netaji Birthday</td>
+            </tr>
+            <tr>
+              <th>Jan 26</th>
+              <td>Republic Day</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Month Section End -->
+  
+    <!-- Duplicate for all other months -->
+    <!-- February-->
+   <div class="month-section">
+      <div class="month">February</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li>1</li>
+        <li class="holiday">2</li>
+        <li class="holiday">3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li class="holiday">9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li class="holiday">14</li>
+        <li>15</li>
+        <li class="holiday">16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li class="holiday">23</li>
+        <li>24</li>
+        <li>25</li>
+        <li class="holiday">26</li>
+        <li>27</li>
+        <li>28</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Feb 2</th><td>Saraswati Puja</td></tr>
+            <tr><th>Feb 3</th><td>Following day of Saraswati Puja</td></tr>
+            <tr><th>Feb 14</th><td>Birthday of Thakur Panchanan Barma and Sab-e-Barat</td></tr>
+            <tr><th>Feb 26</th><td>Shivratri</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+  
+  <!--March-->
+  
+  <div class="month-section">
+     <div class="month">March</div>
+     <ul class="weekdays">
+       <li>Sun</li>
+       <li>Mon</li>
+       <li>Tue</li>
+       <li>Wed</li>
+       <li>Thu</li>
+       <li>Fri</li>
+       <li>Sat</li>
+     </ul>
+     <ul class="days">
+       <li class="holiday">30</li>
+       <li class="holiday">31</li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li></li>
+       <li>1</li>
+       <li class="holiday">2</li>
+       <li>3</li>
+       <li>4</li>
+       <li>5</li>
+       <li>6</li>
+       <li>7</li>
+       <li>8</li>
+       <li class="holiday">9</li>
+       <li>10</li>
+       <li>11</li>
+       <li>12</li>
+       <li>13</li>
+       <li class="holiday">14</li>
+       <li class="holiday">15</li>
+       <li class="holiday">16</li>
+       <li>17</li>
+       <li>18</li>
+       <li>19</li>
+       <li>20</li>
+       <li>21</li>
+       <li>22</li>
+       <li class="holiday">23</li>
+       <li>24</li>
+       <li>25</li>
+       <li>26</li>
+       <li class="holiday">27</li>
+       <li>28</li>
+       <li>29</li>
+     </ul>
+     <div class="hol-list-container">
+       <table>
+         <thead>
+           <tr>
+             <th>Date</th>
+             <td style="text-align:center;"><strong>Holiday</strong></td>
+           </tr>
+         </thead>
+         <tbody>
+           <tr><th>Mar 14</th><td>Dolyatra and Holi</td></tr>
+           <tr><th>Mar 15</th><td>Following day of Holi</td></tr>
+           <tr><th>Mar 27</th><td>Birthday of Shree Shree Harichand Thakur</td></tr>
+           <tr><th>Mar 31</th><td>Eid-ul-fitr</td></tr>
+         </tbody>
+       </table>
+     </div>
+   </div>
+    
+    <!--April-->
+  <div class="month-section">
+      <div class="month">April</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li></li>
+        <li></li>
+        <li class="holiday">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="holiday">6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li class="holiday">10</li>
+        <li>11</li>
+        <li>12</li>
+        <li class="holiday">13</li>
+        <li class="holiday">14</li>
+        <li class="holiday">15</li>
+        <li>16</li>
+        <li>17</li>
+        <li class="holiday">18</li>
+        <li>19</li>
+        <li class="holiday">20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li class="holiday">27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Apr 01</th><td>Following day of Eid-ul-fitr</td></tr>
+            <tr><th>Apr 06</th><td>Ramnavami</td></tr>
+            <tr><th>Apr 10</th><td>Mahabir Jayanti</td></tr>
+            <tr><th>Apr 14</th><td>Birthday of Dr. B.R. Ambedkar</td></tr>
+            <tr><th>Apr 15</th><td>Bengali New Year</td></tr>
+            <tr><th>Apr 18</th><td>Good Friday</td></tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  
+  <!--May-->
+  <div class="month-section">
+      <div class="month">May</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="holiday">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li class="holiday">4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li class="holiday">9</li>
+        <li>10</li>
+        <li class="holiday">11</li>
+        <li class="holiday">12</li>
+        <li class="holiday">13</li>
+        <li class="holiday">14</li>
+        <li class="holiday">15</li>
+        <li class="holiday">16</li>
+        <li class="holiday">17</li>
+        <li class="holiday">18</li>
+        <li class="holiday">19</li>
+        <li class="holiday">20</li>
+        <li class="holiday">21</li>
+        <li class="holiday">22</li>
+        <li class="holiday">23</li>
+        <li>24</li>
+        <li class="holiday">25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>01</th><td>Labour Day</td></tr>
+            <tr><th>09</th><td>Rabindra Jayanti</td></tr>
+            <tr><th>12</th><td>Buddha Purnima</td></tr>
+            <tr><th>12 to 23</th><td>Summer Vacation</td></tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  <!--June-->
+  
+  <div class="month-section">
+      <div class="month">June</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li class="holiday">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="holiday">6</li>
+        <li class="holiday">7</li>
+        <li class="holiday">8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li class="holiday">15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li class="holiday">22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li class="holiday">27</li>
+        <li>28</li>
+        <li class="holiday">29</li>
+        <li>30</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Jun 06</th><td>Previous day of Eid-al-adha</td></tr>
+            <tr><th>Jun 07</th><td>Eid-al-Adha</td></tr>
+            <tr><th>Jun 27</th><td>Rathyatra</td></tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  
+  <!--July-->
+  <div class="month-section">
+      <div class="month">July</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li></li>
+        <li></li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="holiday">6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li class="holiday">13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li class="holiday">20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li class="holiday">27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+                </table>
+      </div>
+  </div>
+  
+  
+  <!--------------August------------------->
+  <div class="month-section">
+      <div class="month">August</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li class="holiday">31</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li>1</li>
+        <li>2</li>
+        <li class="holiday">3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li class="holiday">9</li>
+        <li class="holiday">10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li class="holiday">15</li>
+        <li>16</li>
+        <li class="holiday">17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li class="holiday">24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Aug 09</th><td>Raksha Bandhan</td></tr>
+            <tr><th>Aug 15</th><td>Independence Day</td></tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  
+  <!--------September ----------->
+  
+  <div class="month-section">
+      <div class="month">September</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li></li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="holiday">5</li>
+        <li>6</li>
+        <li class="holiday">7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li class="holiday">14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li class="holiday">21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li class="holiday">28</li>
+        <li class="holiday">29</li>
+        <li class="holiday">30</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Sep 05</th><td>Fateha Doaz Daham</td></tr>
+            <tr><th>Sep 21</th><td>Mahalaya</td></tr>
+            <tr><th>Sep 29-30</th><td>Puja Vacation</td></tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  
+  <!--------October ----------->
+  
+  <div class="month-section">
+      <div class="month">October</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="holiday">1</li>
+        <li class="holiday">2</li>
+        <li class="holiday">3</li>
+        <li class="holiday">4</li>
+        <li class="holiday">5</li>
+        <li class="holiday">6</li>
+        <li class="holiday">7</li>
+        <li class="holiday">8</li>
+        <li class="holiday">9</li>
+        <li class="holiday">10</li>
+        <li class="holiday">11</li>
+        <li class="holiday">12</li>
+        <li class="holiday">13</li>
+        <li class="holiday">14</li>
+        <li class="holiday">15</li>
+        <li class="holiday">16</li>
+        <li class="holiday">17</li>
+        <li class="holiday">18</li>
+        <li class="holiday">19</li>
+        <li class="holiday">20</li>
+        <li class="holiday">21</li>
+        <li class="holiday">22</li>
+        <li class="holiday">23</li>
+        <li class="holiday">24</li>
+        <li>25</li>
+        <li class="holiday">26</li>
+        <li class="holiday">27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Oct 02</th><td>Gandhi Jayanti</td></tr>
+            <tr><th>till Oct 24</th><td>Puja Vacation</td></tr>
+            <tr><th>Oct 27</th><td>Chhat Puja</td></tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  
+  <!--------November ----------->
+  <div class="month-section">
+      <div class="month">November</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li class="holiday">30</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li>1</li>
+        <li class="holiday">2</li>
+        <li>3</li>
+        <li>4</li>
+        <li class="holiday">5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li class="holiday">9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li class="holiday">15</li>
+        <li class="holiday">16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li class="holiday">23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Nov 05</th><td>Birthday of Guru Nanak</td></tr>
+            <tr><th>Nov 15</th><td>Birthday of Birsa Munda</td></tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  
+  <!--------December ----------->
+  <div class="month-section">
+      <div class="month">December</div>
+      <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days">
+        <li></li>
+        <li></li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="holiday">6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li class="holiday">13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li class="holiday">20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li class="holiday">25</li>
+        <li>26</li>
+        <li class="holiday">27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+        <li></li>
+        <li></li>
+        
+      </ul>
+      <div class="hol-list-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <td style="text-align:center;"><strong>Holiday</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>Dec 25</th><td>Christmas Day</td></tr>
+          </tbody>
+        </table>
+      </div>
+  </div>
+  </div>
+<p style="width: 100%; background-color: #004aad; color: #ffffff; font-weight: bold; text-align: center; height: auto; display: flex; align-items: center; justify-content: center; margin: 0; padding: 5px; flex-wrap: wrap;">
+  04 Holidays left under the consideration of Headmaster
+</p>
+    </div>
+
+      
+      
+    <div class="right-div">
+ <div id="sidebar-container"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Hanspukuria Vidyapith. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

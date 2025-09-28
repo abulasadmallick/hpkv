@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login (SMS) - Hanspukuria Vidyapith (H.S.)</title>
+    <meta name="description" content="Login portal for the Student Management System (SMS) of Hanspukuria Vidyapith.">
+    <link rel="icon" type="image/x-icon" href="images/hpkvico.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div id="header-container"></div>
+
+    <main>
+        <section class="page-content full-width-page">
+            <h1><i class="fas fa-sign-in-alt"></i> Student Management Portal</h1>
+            <p class="lead-paragraph">Please log in to access the Student Management System (SMS).</p>
+            
+            <hr class="section-divider">
+            
+            <div class="iframe-container">
+                <iframe src="https://script.google.com/macros/s/AKfycbzqlOEdj05bFTDIDgBNd_c5YIat4Bw0x6O2xZ6CRndEsAoLmVlga8qgFoGUgmtRwcmF/exec" title="Student Management System Login"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="script.js" defer></script>
+    
+    <script>
+      window.addEventListener("message", function(event) {
+        const message = event.data;
+        if (message.action === 'redirect' && message.url) {
+          window.top.location.href = message.url;
+        }
+      });
+    </script>
+
+</body>
+</html>
