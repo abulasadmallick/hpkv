@@ -1,43 +1,33 @@
-<style>
-    /* Add your header and menu styles here or link to your main stylesheet */
-    .main-header {
-        background-color: #f8f9fa;
-        padding: 10px 20px;
-        border-bottom: 1px solid #dee2e6;
-        text-align: center;
-    }
-    .main-nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-    }
-    .main-nav li {
-        float: left;
-    }
-    .main-nav li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    .main-nav li a:hover {
-        background-color: #111;
-    }
-</style>
+<header class="site-header">
+    <div class="header-content">
+        <div class="school-title">
+            <a href="/index.html">Hanspukuria Vidyapith (H.S.)</a>
+        </div>
 
-<header class="main-header">
-    <h1>Hanspukuria Vidyapith (H.S.)</h1>
-    <p>Your School's Tagline or Address</p>
+        <button id="hamburger" aria-label="Open Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="main-nav">
+            <ul id="menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                
+                <li class="has-submenu">
+                    <a href="#">Academics</a>
+                    <ul class="submenu">
+                        <li><a href="/academics/departments.html">Departments</a></li>
+                        <li><a href="/academics/results.html">Results</a></li>
+                        <li><a href="/academics/syllabus.html">Syllabus</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/admissions.html">Admissions</a></li>
+                <li><a href="/notice-board.html">Notice Board</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-<nav class="main-nav">
-    <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About Us</a></li>
-        <li><a href="/admissions.html">Admissions</a></li>
-        <li><a href="/notice.html">Notice Board</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-    </ul>
-</nav>
